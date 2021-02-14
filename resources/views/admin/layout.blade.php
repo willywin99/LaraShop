@@ -138,6 +138,12 @@
 
 
 <script src="{{ URL::asset('admin/assets/js/sleek.bundle.js') }}"></script>
+
+<script>
+    $('.delete').on("submit", function() {
+        return confirm("Do you want to remove this?");
+    });
+</script>
 </body>
 
 </html>
