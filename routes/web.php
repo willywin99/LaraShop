@@ -18,10 +18,15 @@ Route::get('/', function () {
 Route::group(
     [
         'namespace' => 'Admin',
-        'prefix' => 'admin'
+        'prefix' => 'admin',
+        'middleware' => ['auth']
     ],
     function(){
         Route::get('dashboard', 'DashboardController@index');
         Route::resource('categories', 'CategoryController');
     }
 );
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
