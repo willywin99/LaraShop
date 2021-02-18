@@ -1,4 +1,4 @@
- <!--
+<!--
 	====================================
 	——— LEFT SIDEBAR WITH FOOTER
 	=====================================
@@ -38,6 +38,28 @@
 							<li>
 								<a class="sidenav-item-link" href="{{ url('admin/attributes')}}">
 								<span class="nav-text">Attributes</span>
+								</a>
+							</li>
+						</div>
+					</ul>
+				</li>
+				<li  class="has-sub" >
+					<a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#auth"
+						aria-expanded="false" aria-controls="dashboard">
+						<i class="mdi mdi-account-multiple-outline"></i>
+						<span class="nav-text">Users &amp; Roles</span> <b class="caret"></b>
+					</a>
+					<ul  class="collapse"  id="auth"
+						data-parent="#sidebar-menu">
+						<div class="sub-menu">
+							<li  class="active" >
+								<a class="sidenav-item-link" href="{{ url('admin/users')}}">
+								<span class="nav-text">Users</span>
+								</a>
+							</li>
+							<li>
+								<a class="sidenav-item-link" href="{{ url('admin/roles')}}">
+								<span class="nav-text">Roles</span>
 								</a>
 							</li>
 						</div>
