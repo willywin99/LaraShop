@@ -9,9 +9,12 @@ use App\Http\Requests\CategoryRequest;
 
 use Str;
 use Session;
+use App\Authorizable;
 
 class CategoryController extends Controller
 {
+    use Authorizable;
+
     /**
      * Display a listing of the resource.
      *
@@ -97,6 +100,7 @@ class CategoryController extends Controller
     {
         $params = $request->except('_token');
         $params['slug'] = Str::slug($params['name']);
+        $params['parent_id'] = (int)$params['parent_id'];
 
         $category = Category::findOrFail($id);
         if ($category->update($params)) {

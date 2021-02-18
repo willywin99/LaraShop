@@ -12,8 +12,12 @@ use App\Http\Requests\AttributeOptionRequest;
 
 use Session;
 
+use App\Authorizable;
+
 class AttributeController extends Controller
 {
+    use Authorizable;
+
     public function __construct()
     {
         $this->data['types'] = Attribute::types();
