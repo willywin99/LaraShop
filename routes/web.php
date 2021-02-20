@@ -11,9 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', 'HomeController@index');
+
+Route::get('/products', 'ProductController@index');
+Route::get('/product/{slug}', 'ProductController@show');
 
 Route::group(
     [
