@@ -179,6 +179,8 @@ return [
 
         Spatie\Permission\PermissionServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
+
+        Darryldecode\Cart\CartServiceProvider::class,
     ],
 
     /*
@@ -231,6 +233,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         "General" => App\Helpers\General::class,
+
+        'Cart' => Darryldecode\Cart\Facades\CartFacade::class,
     ],
 
 ];

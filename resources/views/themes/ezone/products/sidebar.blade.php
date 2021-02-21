@@ -1,5 +1,4 @@
 <div class="shop-sidebar mr-50">
-
     <form method="GET" action="{{ url('products')}}">
 		<div class="sidebar-widget mb-40">
 			<h3 class="sidebar-title">Filter by Price</h3>
@@ -16,18 +15,20 @@
 				</div>
 			</div>
 		</div>
+    </form>
+
     @if ($categories)
-        <div class="sidebar-widget mb-45">
-            <h3 class="sidebar-title">Categories</h3>
-            <div class="sidebar-categories">
-                <ul>
-                    @foreach ($categories as $category)
-                        <li><a href="{{ url('products?category=' . $category->slug) }}">{{ $category->name }}</a></li>
-                    @endforeach
-                </ul>
-            </div>
-        </div>
-    @endif
+		<div class="sidebar-widget mb-45">
+			<h3 class="sidebar-title">Categories</h3>
+			<div class="sidebar-categories">
+				<ul>
+					@foreach ($categories as $category)
+							<li><a href="{{ url('products?category='. $category->slug) }}">{{ $category->name }}</a></li>
+					@endforeach
+				</ul>
+			</div>
+		</div>
+	@endif
 
     @if ($colors)
 		<div class="sidebar-widget sidebar-overflow mb-45">
@@ -54,5 +55,4 @@
 			</div>
 		</div>
 	@endif
-
 </div>
