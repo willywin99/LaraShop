@@ -1,5 +1,7 @@
 <?php
 
+use PHPMailer\PHPMailer;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -65,3 +67,25 @@ Route::group(
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// Route::get('/tes-email', function () {
+//     $text             = 'Hello Mail';
+//     $mail             = new PHPMailer\PHPMailer();
+//     $mail->IsSMTP();
+//     $mail->SMTPDebug  = 1;
+//     $mail->SMTPAuth   = true;
+//     $mail->Host       = env('MAIL_HOST');
+//     $mail->Port       = env('MAIL_PORT');
+//     $mail->IsHTML(true);
+//     $mail->Username = env('MAIL_USERNAME');
+//     $mail->Password = env('MAIL_PASSWORD');
+//     $mail->SetFrom(env('MAIL_FROM_ADDRESS'), env('MAIL_FROM_NAME'));
+//     $mail->Subject = "Test Subject";
+//     $mail->Body    = $text;
+//     $mail->AddAddress("willywin1999@gmail.com");
+//     if ($mail->Send()) {
+//         return 'Email Sended Successfully';
+//     } else {
+//         return 'Failed to Send Email';
+//     }
+// });

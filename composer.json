@@ -17,6 +17,8 @@
         "laravel/framework": "^6.20",
         "laravel/tinker": "^2.5",
         "laravelcollective/html": "^6.2",
+        "midtrans/midtrans-php": "^2.3",
+        "phpmailer/phpmailer": "^6.3",
         "spatie/laravel-permission": "^4.0"
     },
     "require-dev": {
