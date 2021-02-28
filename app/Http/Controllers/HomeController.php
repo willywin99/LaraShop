@@ -27,6 +27,6 @@ class HomeController extends Controller
     {
         // return view('themes.superb.home');
         // return view('themes.ezone.home');
-        return $this->load_theme('home');
+        return $this->loadTheme('home');
     }
 }

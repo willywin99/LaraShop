@@ -35,6 +35,11 @@ Route::get('orders/received/{orderID}', 'OrderController@received');
 // Route::get('orders/invoice', 'OrderController@invoice');
 Route::get('orders/cities', 'OrderController@cities');
 
+Route::post('payments/notification', 'PaymentController@notification');
+Route::get('payments/completed', 'PaymentController@completed');
+Route::get('payments/failed', 'PaymentController@failed');
+Route::get('payments/unfinish', 'PaymentController@unfinish');
+
 Route::group(
     [
         'namespace' => 'Admin',
