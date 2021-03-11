@@ -32,9 +32,9 @@ class AlterAsNullableColumnInProductsTable extends Migration
         Schema::table('products', function (Blueprint $table) {
             $table->decimal('price', 15, 2)->nullable(false)->change();
             $table->decimal('weight', 15, 2)->nullable(false)->change();
-            $table->decimal('short_description', 15, 2)->nullable(false)->change();
-            $table->decimal('description', 15, 2)->nullable(false)->change();
-            $table->decimal('status', 15, 2)->nullable(false)->change();
+            $table->text('short_description')->nullable(false)->change();
+            $table->text('description')->nullable(false)->change();
+            $table->integer('status')->nulllable(false)->change();
         });
     }
 }

@@ -94,9 +94,9 @@
 					</li>
 				</ul>
 				@if (!$order->trashed())
-                    @php
+                    {{-- @php
                         dd($order->status);
-                    @endphp
+                    @endphp --}}
 					@if ($order->isPaid() && $order->isConfirmed())
 						<a href="{{ url('admin/shipments/'. $order->shipment->id .'/edit')}}" class="btn btn-block mt-2 btn-lg btn-primary btn-pill"> Procced to Shipment</a>
 					@endif

@@ -16,7 +16,7 @@ class AddParentProductIdToProductAttributeValuesTable extends Migration
         Schema::table('product_attribute_values', function (Blueprint $table) {
             $table->unsignedBigInteger('parent_product_id')->after('id')->nullable();
 
-            $table->foreign('parent_product_id')->references('id')->on('products');
+            $table->foreign('parent_product_id')->references('id')->on('products')->onDelete('cascade');
         });
     }
 
