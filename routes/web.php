@@ -41,6 +41,8 @@ Route::get('payments/completed', 'PaymentController@completed');
 Route::get('payments/failed', 'PaymentController@failed');
 Route::get('payments/unfinish', 'PaymentController@unfinish');
 
+Route::resource('favorites', 'FavoriteController');
+
 Route::group(
     [
         'namespace' => 'Admin',
