@@ -103,6 +103,11 @@ class Order extends Model
 		return $this->belongsTo('App\Models\User');
 	}
 
+    public function scopeForUser($query, $user)
+    {
+        return $query->where('user_id', $user->id);
+    }
+
 	/**
 	 * Generate order code
 	 *

@@ -58,11 +58,12 @@
 									@endforelse
                                 </tbody>
                             </table>
+                            {{ $favorites->links() }}
 						</div>
 					</div>
-					<div class="mt-50 text-center">
+					{{-- <div class="mt-50 text-center">
 						{{ $favorites->links() }}
-					</div>
+					</div> --}}
 				</div>
 			</div>
 		</div>
