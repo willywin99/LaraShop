@@ -183,6 +183,8 @@ return [
         Darryldecode\Cart\CartServiceProvider::class,
 
         Intervention\Image\ImageServiceProvider::class,
+
+        Barryvdh\DomPDF\ServiceProvider::class,
     ],
 
     /*
@@ -239,6 +241,8 @@ return [
         'Cart' => Darryldecode\Cart\Facades\CartFacade::class,
 
         'Image' => Intervention\Image\Facades\Image::class,
+
+        'PDF' => Barryvdh\DomPDF\Facade::class,
     ],
 
 ];
